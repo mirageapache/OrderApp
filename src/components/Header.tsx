@@ -1,11 +1,11 @@
-import 'styles/css/Header.css'
+import 'styles/css/header.css'
 import {ReactComponent as IconCart} from 'assets/icons/cart.svg'
 
 type HeaderProps = {
   title: string
 }
 
-function Header ( props: HeaderProps ) {
+export default function Header ( props: HeaderProps ) {
   const { title } = props;
 
   return (
@@ -15,5 +15,3 @@ function Header ( props: HeaderProps ) {
     </div>
   )
 }
-
-export default Header;
