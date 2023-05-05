@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: var(--gray-2);
+  height: 100%;
+}
+.sidebar .sidebar-list .sidebar-item {
+  font-weight: 700;
+  padding: 15px 10px;
+  border: 1px solid var(--gray-2);
+  cursor: pointer;
+}
+.sidebar .sidebar-list .active-item {
+  background-color: white;
+  border-right: 1px solid white;
+}
