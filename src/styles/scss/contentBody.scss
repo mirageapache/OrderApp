@@ -1,0 +1,19 @@
+.content-body{
+  position: fixed;
+  top: 60px;
+  width: calc(100% - 1px);
+  height: calc( 100% - 61px);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  .side-bar{
+    grid-column: 1 / 2;
+  }
+
+  .main-content{
+    grid-column: 2 / 5;
+  }
+
+
+
+}

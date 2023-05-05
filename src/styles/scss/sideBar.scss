@@ -1,0 +1,22 @@
+.sidebar {
+  // border: 1px solid blue;
+  background-color: var(--gray-2);
+  // padding: 5px 10px;
+  height: 100%;
+
+  .sidebar-list{
+
+    .sidebar-item{
+      font-weight: 700;
+      padding: 15px 10px;
+      border: 1px solid var(--gray-2);
+      cursor: pointer;
+    }
+
+    .active-item{
+      background-color: white;
+      border-right: 1px solid white;
+    }
+  }
+
+}
