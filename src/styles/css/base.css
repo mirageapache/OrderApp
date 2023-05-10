@@ -28,3 +28,6 @@ body .icon {
   padding: 10px;
   cursor: pointer;
 }
+body .icon path {
+  cursor: pointer;
+}
