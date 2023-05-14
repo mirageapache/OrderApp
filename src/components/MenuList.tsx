@@ -2,6 +2,7 @@ import 'styles/css/menuList.css'
 import { menuList } from 'assets/dummyData/menuList.js'
 import image from 'assets/images/chesee-egg-cake.jpg'
 import {ReactComponent as IconAdd } from 'assets/icons/add.svg'
+import { useSetting } from 'context/SettingContext';
 
 interface ItemData {
   name: string;
@@ -10,6 +11,7 @@ interface ItemData {
 }
 
 export default function MenuList(){
+  const { menuMode } = useSetting();
 
   const item = menuList.map((item: ItemData, index: number)=>{
     return <MenuItem key={index} data={item} />
@@ -17,7 +19,7 @@ export default function MenuList(){
 
   return(
     <div className="menu-list">
-      <div className='list-mode'>
+      <div className={menuMode}>
         {item}
       </div>
     </div>
