@@ -7,7 +7,7 @@ interface SettingContextType {
 }
 
 const defaultValue: SettingContextType = {
-  menuMode: "list",
+  menuMode: "list-mode",
   setmenuMode: () => {}
 };
 
@@ -20,7 +20,7 @@ const SettingContext = createContext<SettingContextType>(defaultValue);
 export const useSetting = () => useContext(SettingContext);
 
 export const SettingProvider = ({children}:ProviderProps) => {
-  const [menuMode, setmenuMode] = useState<string>('list'); //menu顯示模式 list & grid
+  const [menuMode, setmenuMode] = useState<string>('list-mode'); //menu顯示模式 list & grid
 
   return (
     <SettingContext.Provider 

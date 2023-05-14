@@ -2,7 +2,7 @@
   position: fixed;
   top: 110px;
   width: calc(100% - 1px);
-  height: calc(100% - 61px);
+  height: calc(100% - 111px);
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
@@ -11,4 +11,5 @@
 }
 .content-body .main-content {
   grid-column: 2/5;
+  height: 100%;
 }
