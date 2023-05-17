@@ -1,6 +1,7 @@
 .menu-list {
   height: 100%;
   overflow: auto;
+  position: relative;
 }
 .menu-list .list-mode .menu-item {
   display: flex;
