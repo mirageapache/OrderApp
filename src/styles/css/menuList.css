@@ -1,3 +1,68 @@
 .menu-list {
-  border: 1px solid green;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.menu-list .list-mode .menu-item {
+  display: flex;
+  padding: 10px;
+}
+.menu-list .list-mode .menu-item .item-img {
+  border: 1px solid gray;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.menu-list .list-mode .menu-item .item-info {
+  position: relative;
+  width: 100%;
+}
+.menu-list .list-mode .menu-item .item-info .item-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.menu-list .list-mode .menu-item .item-info .item-price {
+  font-size: 18px;
+  margin-top: 15px;
+}
+.menu-list .list-mode .menu-item .item-info .add-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.menu-list .list-mode .menu-item .item-info .add-icon path {
+  fill: var(--brand-color);
+}
+.menu-list .grid-mode {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+}
+.menu-list .grid-mode .menu-item {
+  padding: 10px;
+}
+.menu-list .grid-mode .menu-item .item-img {
+  border: 1px solid gray;
+  width: 150px;
+  border-radius: 10px;
+}
+.menu-list .grid-mode .menu-item .item-info {
+  position: relative;
+}
+.menu-list .grid-mode .menu-item .item-info .item-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.menu-list .grid-mode .menu-item .item-info .item-price {
+  font-size: 1rem;
+  margin-top: 15px;
+}
+.menu-list .grid-mode .menu-item .item-info .add-icon {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  padding: 0;
+}
+.menu-list .grid-mode .menu-item .item-info .add-icon path {
+  fill: var(--brand-color);
 }

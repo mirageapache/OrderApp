@@ -1,0 +1,102 @@
+.item-model .gray-panel {
+  background-color: rgba(50, 50, 50, 0.5);
+  position: fixed;
+  display: block;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.item-model .model-panel {
+  position: fixed;
+  z-index: 100;
+  display: block;
+  background-color: white;
+  width: 70vw;
+  left: 15vw;
+  top: 60px;
+  border-radius: 10px;
+  padding: 0 30px;
+}
+.item-model .model-panel .model-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.item-model .model-panel .model-header .item-name {
+  font-size: 2.5em;
+}
+.item-model .model-panel .model-header .cancel-icon {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -20px;
+  top: -15px;
+}
+.item-model .model-panel .model-header .cancel-icon path {
+  fill: var(--secondary-color);
+}
+.item-model .model-panel .model-header .cancel-icon:hover path {
+  fill: var(--error-color);
+}
+.item-model .model-panel .model-body {
+  text-align: center;
+  max-height: 460px;
+  overflow: auto;
+}
+.item-model .model-panel .model-body img {
+  border: 1px solid var(--gray-6);
+  width: 60%;
+  margin-bottom: 10px;
+}
+.item-model .model-panel .model-body .customization {
+  border: 1px solid gray;
+}
+.item-model .model-panel .model-body .customization .option-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+}
+.item-model .model-panel .model-body .customization .option-div span {
+  font-size: 1em;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.item-model .model-panel .model-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+.item-model .model-panel .model-footer .amount-option {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+.item-model .model-panel .model-footer .amount-option .amount {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  width: 30px;
+  text-align: center;
+}
+.item-model .model-panel .model-footer .amount-option .icon {
+  width: 30px;
+  height: 30px;
+}
+.item-model .model-panel .model-footer .amount-option .add-icon path {
+  fill: var(--success-color);
+}
+.item-model .model-panel .model-footer .amount-option .minus-icon path {
+  fill: var(--error-color);
+}
+.item-model .model-panel .model-footer .amount-option .add-cart {
+  background-color: var(--yellow-button-color);
+  margin-left: 20px;
+}

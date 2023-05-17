@@ -1,9 +1,10 @@
 body {
   --brand-color:#06C167;
+  --yellow-button-color:#ffc107;
   --secondary-text: #757575;
   --primary-color: #0062ff;
   --secondary-color: #6c757d;
-  --success-color: #17be25;
+  --success-color: #0dd21d;
   --warning-color: #ffc542;
   --error-color: #fc5a5a;
   --gray-9: #171725;
@@ -24,7 +25,17 @@ body .icon {
   width: 25px;
   height: 25px;
   box-sizing: initial;
-  border-radius: 10px;
-  padding: 10px;
+  margin: 10px;
   cursor: pointer;
+}
+body .icon path {
+  cursor: pointer;
+}
+body .btn {
+  font-size: 1em;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 8px 14px;
 }
