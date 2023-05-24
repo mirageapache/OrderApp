@@ -16,8 +16,8 @@
     z-index: 100;
     display: block;
     background-color: white;
-    width: 70vw;
-    left: 15vw;
+    width: 90vw;
+    left: 5vw;
     top: 60px;
     border-radius: 10px;
     padding: 0 30px;
@@ -37,7 +37,7 @@
         width: 30px;
         height: 30px;
         position: absolute;
-        right: -20px;
+        right: -25px;
         top: -15px;
         path{
           fill: var(--secondary-color);
@@ -54,7 +54,7 @@
     
     .model-body{
       text-align: center;
-      max-height: 460px;
+      max-height: 60vh;
       overflow: auto;
       
       img{
@@ -85,12 +85,13 @@
 
     .model-footer{
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
       margin-top: 10px;
       border-top: 1px solid gray;
       padding: 10px 0;
-    
+
       .amount-option{
         display: flex;
         align-items: center; 
@@ -109,7 +110,7 @@
         }
         .add-icon{
           path{
-            fill: var(--success-color);
+            fill: var(--brand-color);
           }
         }
         .minus-icon{

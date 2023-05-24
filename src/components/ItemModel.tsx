@@ -14,7 +14,7 @@ export default function ItemModel(props:{ handleClick: (value: boolean) => void 
       <div className='gray-panel' onClick={() => handleClick(false)}></div>
       <div className='model-panel'>
         <div className='model-header'>
-          <h1 className='item-name'>起司蛋餅</h1>
+          <h2 className='item-name'>起司蛋餅</h2>
           <IconCancel className='icon cancel-icon' onClick={() => handleClick(false)}/>
         </div>
         <div className='model-body'>
