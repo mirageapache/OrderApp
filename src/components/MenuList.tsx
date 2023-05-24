@@ -5,14 +5,13 @@ import ItemModel from './ItemModel';
 import { useEffect, useState } from 'react';
 import { apiURL } from 'api';
 
-// import { menuList } from 'assets/dummyData/menuList.js'
-import image from 'assets/images/chesee-egg-cake.jpg'
+// SVG檔
 import {ReactComponent as IconAdd } from 'assets/icons/add.svg'
 
 interface ItemData {
   name: string;
   price: number;
-  img: string;
+  imgPath: string;
 }
 
 export default function MenuList(){
@@ -45,11 +44,11 @@ export default function MenuList(){
 }
 
 function MenuItem( props:{ data: ItemData; modelState: boolean; handleClick: (value: boolean) => void } ){
-  const {data, modelState, handleClick} = props
-
+  const {data, modelState, handleClick} = props;
+  
   return(
     <div className='menu-item'>
-      <img className='item-img' src={image} alt="item images" />
+      <img className='item-img' src={data.imgPath || "images/default_img.jpg"} alt="images/default_img.jpg" />
       <div className='item-info'>
         <p className='item-name'>{data.name}</p>
         <p className='item-price'>NT. {data.price}</p>
