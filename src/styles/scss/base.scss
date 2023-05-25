@@ -26,6 +26,11 @@ body{
     cursor: default;
   }
 
+  input,
+  textarea {
+    cursor: text;
+  }
+
   .icon{
     width: 25px;
     height: 25px;
@@ -37,12 +42,21 @@ body{
     }
   }
 
-  .btn{
+  .icon-btn{
     font-size: 1em;
     font-weight: 600;
     border: 1px solid transparent;
     cursor: pointer;
     border-radius: 20px;
+    padding: 8px 14px;
+  }
+
+  .btn{
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
     padding: 8px 14px;
   }
 

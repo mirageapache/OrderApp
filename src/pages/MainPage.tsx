@@ -6,7 +6,7 @@ import ToolBanner from 'components/ToolBanner';
 export default function MainPage(){
   return(
     <div id='main-page' className='main-page'>
-      <Header title='OrderApp' />
+      <Header />
       <ToolBanner />
       <ContentBody />
     
