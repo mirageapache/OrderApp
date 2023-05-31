@@ -17,16 +17,24 @@
     .form-label{
       font-size: 1.2em;
       font-weight: 600;
-      display: block;
       margin: 5px 0;
       border: 1px solid transparent;
+    }
+
+    .err-msg{
+      display: none;
+      color: red;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+    .msg-show{
+      display: inline;
     }
 
     .form-input{
       width: 100%;
       font-size: 1.2em;
       display: block;
-      
       margin-top: 5px;
       margin-bottom: 20px;
       border-radius: 6px;
@@ -37,6 +45,15 @@
     input,select{
       height: 40px;
     }
+
+    .input-show {
+      border-color: red;
+      &:focus {
+        outline-color: red;
+      }
+    }
+    
+
 
     .create-btn{
       font-size: 1.2em;

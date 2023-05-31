@@ -16,9 +16,17 @@
 #create-item .create-form .form-label {
   font-size: 1.2em;
   font-weight: 600;
-  display: block;
   margin: 5px 0;
   border: 1px solid transparent;
+}
+#create-item .create-form .err-msg {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+#create-item .create-form .msg-show {
+  display: inline;
 }
 #create-item .create-form .form-input {
   width: 100%;
@@ -33,6 +41,12 @@
 }
 #create-item .create-form input, #create-item .create-form select {
   height: 40px;
+}
+#create-item .create-form .input-show {
+  border-color: red;
+}
+#create-item .create-form .input-show:focus {
+  outline-color: red;
 }
 #create-item .create-form .create-btn {
   font-size: 1.2em;
