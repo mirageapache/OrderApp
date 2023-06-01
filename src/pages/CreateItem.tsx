@@ -93,11 +93,16 @@ export default function CreateItem(){
     }
     else{
       // data validation success
-      console.log('data validation checked!')
-      axios.post(`${apiURL}/create_item`,{name,description,price,itemType,option,imgPath})
+      axios.post(`${apiURL}/menu/create`,{name,description,price,itemType,option,imgPath})
       .then((result)=>{
         // call API success
-        console.log(result.data)
+        alert('新增成功！')
+        setName('')
+        setDescription('')
+        setPrice(20)
+        setItemType('meals')
+        setOption('')
+        setImgPath('')
       })
       .catch(error => {
         // call API failed
@@ -171,7 +176,7 @@ export default function CreateItem(){
         <input id="custom-option" className="form-input" type="text" placeholder="加辣、加醬…" value={option} onChange={(e)=>{setOption(e.target.value)}} />
       {/* 圖片路徑 */}
         <label className="form-label" htmlFor="item-img">圖片名稱</label>
-        <input id="item-img" className="form-input" type="text" placeholder="default_img" value={imgPath} onChange={(e)=>{setImgPath(e.target.value)}} />
+        <input id="item-img" className="form-input" type="text" placeholder="default_img.jpg" value={imgPath} onChange={(e)=>{setImgPath(e.target.value)}} />
 
         <div className="action-div">
           <button className="btn create-btn" onClick={handleCreate}>新增</button>

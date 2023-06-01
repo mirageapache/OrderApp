@@ -3,6 +3,16 @@
   overflow: auto;
   position: relative;
 
+  @mixin itemImg{
+    border: 1px solid gray;
+    display: block;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
   // 清單模式
   .list-mode{
     .menu-item {
@@ -10,11 +20,7 @@
       padding: 10px;
   
       .item-img {
-        border: 1px solid gray;
-        width: 100px;
-        height: 100px;
-        border-radius: 10px;
-        margin-right: 10px;
+        @include itemImg();
       }
   
       .item-info {
@@ -53,9 +59,7 @@
       padding: 10px;
 
       .item-img {
-        border: 1px solid gray;
-        width: 150px;
-        border-radius: 10px;
+        @include itemImg();
       }
 
       .item-info {
@@ -76,7 +80,7 @@
           right: 25px;
           bottom: 0;
           padding: 0;
-
+          margin: 0;
           path {
             fill: var(--brand-color);
           }

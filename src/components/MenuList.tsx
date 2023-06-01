@@ -21,7 +21,7 @@ export default function MenuList(){
 
   useEffect(() => {
     if(menuList.length === 0){
-      axios.get(`${apiURL}/menulist`)
+      axios.get(`${apiURL}/menu`)
       .then(res => {
         setMenuList(res.data);
       })
@@ -48,7 +48,7 @@ function MenuItem( props:{ data: ItemData; modelState: boolean; handleClick: (va
   
   return(
     <div className='menu-item'>
-      <img className='item-img' src={data.imgPath || "images/default_img.jpg"} alt="images/default_img.jpg" />
+      <img className='item-img' src={data.imgPath || "images/default_img.jpg"} alt="images" />
       <div className='item-info'>
         <p className='item-name'>{data.name}</p>
         <p className='item-price'>NT. {data.price}</p>
