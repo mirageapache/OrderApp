@@ -1,15 +1,10 @@
 import 'styles/css/header.css'
 
-
-type HeaderProps = {
-  title: string
-}
-
-export default function Header ( props: HeaderProps ) {
-  const { title } = props;
+export default function Header () {
+  
   return (
     <div className="header">
-      <h2 className='brand-title'>{title}</h2>
+      <h2 className='brand-title'>OrderApp</h2>
 
     </div>
   )

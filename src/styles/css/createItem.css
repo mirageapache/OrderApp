@@ -1,0 +1,77 @@
+#create-item {
+  margin-top: 60px;
+  padding-bottom: 50px;
+}
+#create-item .page-title {
+  padding: 10px;
+  text-align: center;
+}
+#create-item .create-form {
+  max-width: 720px;
+  margin: 5px 5%;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 15px 8vw;
+}
+#create-item .create-form .form-label {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 5px 0;
+  border: 1px solid transparent;
+}
+#create-item .create-form .err-msg {
+  display: none;
+  color: red;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+#create-item .create-form .msg-show {
+  display: inline;
+}
+#create-item .create-form .form-input {
+  width: 100%;
+  font-size: 1.2em;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--gray-6);
+  padding: 5px;
+  resize: none;
+}
+#create-item .create-form input, #create-item .create-form select {
+  height: 40px;
+}
+#create-item .create-form .input-show {
+  border-color: red;
+}
+#create-item .create-form .input-show:focus {
+  outline-color: red;
+}
+#create-item .create-form .create-btn {
+  font-size: 1.2em;
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  #create-item .create-form {
+    margin: 5px auto;
+    padding: 15px 50px;
+  }
+  #create-item .create-form .fold-div {
+    display: flex;
+    justify-content: space-between;
+  }
+  #create-item .create-form .fold-div div {
+    width: 47%;
+  }
+  #create-item .create-form .action-div {
+    display: flex;
+    justify-content: right;
+  }
+  #create-item .create-form .action-div .create-btn {
+    width: auto;
+    padding: 8px 25px;
+  }
+}

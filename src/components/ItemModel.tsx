@@ -2,7 +2,6 @@ import 'styles/css/itemModel.css'
 import { ReactComponent as IconCancel } from 'assets/icons/cancel.svg'
 import { ReactComponent as IconAdd } from 'assets/icons/add.svg'
 import { ReactComponent as IconMinus } from 'assets/icons/minus.svg'
-import image from 'assets/images/chesee-egg-cake.jpg'
 import { useState } from 'react'
 
 export default function ItemModel(props:{ handleClick: (value: boolean) => void }){
@@ -19,7 +18,7 @@ export default function ItemModel(props:{ handleClick: (value: boolean) => void 
         </div>
         <div className='model-body'>
           <div className='img-div'>
-            <img src={image} alt="item images" />
+            <img src='' alt="item images" />
           </div>
           <div className='customization'>
             <h2>客製化選項</h2>
