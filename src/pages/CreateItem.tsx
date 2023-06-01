@@ -3,6 +3,8 @@ import Header from "components/Header";
 import { useEffect, useRef, useState } from "react";
 import 'styles/css/createItem.css';
 import { apiURL } from 'api';
+import Notification from "components/Notification";
+import { useNoti } from "context/NotiContext";
 
 interface ErrorMsg {
   title: string,
@@ -27,6 +29,8 @@ export default function CreateItem(){
   // paragraph元素
   const nameMsgRef = useRef<HTMLParagraphElement>(null!);
   const desMsgRef = useRef<HTMLParagraphElement>(null!);
+  // Noti提示訊息框
+  const { is_alert, setIsAlert, setNotiMessage } = useNoti();
 
   useEffect(() => {
     let nameInput = nameRef.current;
@@ -96,7 +100,8 @@ export default function CreateItem(){
       axios.post(`${apiURL}/menu/create`,{name,description,price,itemType,option,imgPath})
       .then((result)=>{
         // call API success
-        alert('新增成功！')
+        setNotiMessage({type:"success", message:"新增成功！"});
+        setIsAlert(true)
         setName('')
         setDescription('')
         setPrice(20)
@@ -182,6 +187,9 @@ export default function CreateItem(){
           <button className="btn create-btn" onClick={handleCreate}>新增</button>
         </div>
       </div>
+
+      {/* 通知訊息*/}
+      {is_alert && <Notification />}
     </div>
   )
 }

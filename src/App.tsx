@@ -7,16 +7,19 @@ import { MainPage, CreateItem } from 'pages';
 // CSS style
 import './styles/css/reset.css';
 import './styles/css/base.css';
+import { NotiProvider } from 'context/NotiContext';
 
 function App () {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <SettingProvider>
-          <Routes>  
-            <Route path='/' element={<MainPage/>}></Route>
-            <Route path='/createMenuItem' element={<CreateItem/>}></Route>
-          </Routes>
+          <NotiProvider>
+            <Routes>  
+              <Route path='/' element={<MainPage/>}></Route>
+              <Route path='/createMenuItem' element={<CreateItem/>}></Route>
+            </Routes>
+          </NotiProvider>
         </SettingProvider>
       </BrowserRouter>
     </div>
