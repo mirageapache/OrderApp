@@ -21,8 +21,8 @@ export default function CreateItem(){
   const [description, setDescription] = useState<string>('')
   const [price, setPrice] = useState<string|number>(20)
   const [itemType, setItemType] = useState<string>('meals')
-  const [option, setOption] = useState<string>('')
-  const [imgPath, setImgPath] = useState<string>('')
+  const [customOption, setCustomOption] = useState<string>('')
+  const [imgName, setimgName] = useState<string>('')
   //  input元素
   const nameRef = useRef<HTMLInputElement>(null!);
   const desRef = useRef<HTMLTextAreaElement>(null!);
@@ -97,7 +97,7 @@ export default function CreateItem(){
     }
     else{
       // data validation success
-      axios.post(`${apiURL}/menu/create`,{name,description,price,itemType,option,imgPath})
+      axios.post(`${apiURL}/menu/create`,{name,description,price,itemType,customOption,imgName})
       .then((result)=>{
         // call API success
         setNotiMessage({type:"success", message:"新增成功！"});
@@ -106,8 +106,8 @@ export default function CreateItem(){
         setDescription('')
         setPrice(20)
         setItemType('meals')
-        setOption('')
-        setImgPath('')
+        setCustomOption('')
+        setimgName('')
       })
       .catch(error => {
         // call API failed
@@ -117,20 +117,25 @@ export default function CreateItem(){
         if(status_code === 400){
           if(err_msg === 'name is require'){
             setErrorMsg({title: 'name',msg: '餐點名稱必填'})
+            setNotiMessage({type:"error", message:"餐點名稱必填"});
           }
           else if(err_msg === 'name maximum number of characters is over 50'){
             setErrorMsg({title: 'name',msg: '字數上限為50字'})
+            setNotiMessage({type:"error", message:"字數上限為50字"});
           }
           else if(err_msg === 'description is require'){
             setErrorMsg({title: 'description',msg: '餐點說明必填'})
+            setNotiMessage({type:"error", message:"餐點說明必填"});
           }
           else if(err_msg === 'description maximum number of characters is over 150'){
             setErrorMsg({title: 'description',msg: '字數上限為150字'})
+            setNotiMessage({type:"error", message:"字數上限為150字"});
           }
         }
         else if(status_code === 500){
-          alert('與伺服器連線有異常！請稍候再試！')
+          setNotiMessage({type:"error", message:"與伺服器連線有異常！請稍候再試！"});
         }
+        setIsAlert(true)
       })
     }
     
@@ -159,7 +164,6 @@ export default function CreateItem(){
             {/* 價格 */}
             <label className="form-label" htmlFor="item-price">價格</label>
             <input id="item-price" className="form-input" type='number' placeholder="餐點訂價" min={0} value={price} onChange={(e)=>{setPrice(e.target.value)}} />
-
           </div>
           <div>
 
@@ -169,7 +173,7 @@ export default function CreateItem(){
                 <option value="meals" >活力套餐 - meals</option>
                 <option value="burgers">滿足漢堡 - burgers</option>
                 <option value="toasts">現烤吐司 - toasts</option>
-                <option value="egg-cakes">經典蛋餅 - egg-cakes</option>
+                <option value="eggcakes">經典蛋餅 - eggcakes</option>
                 <option value="snacks">點心小品 - snacks</option>
                 <option value="drinks">飲料 - drinks</option>
               </select>
@@ -178,10 +182,10 @@ export default function CreateItem(){
 
       {/* 客製選項 */}
         <label className="form-label" htmlFor="custom-option">客製選項</label>
-        <input id="custom-option" className="form-input" type="text" placeholder="加辣、加醬…" value={option} onChange={(e)=>{setOption(e.target.value)}} />
+        <input id="custom-option" className="form-input" type="text" placeholder="加辣、加醬…" value={customOption} onChange={(e)=>{setCustomOption(e.target.value)}} />
       {/* 圖片路徑 */}
         <label className="form-label" htmlFor="item-img">圖片名稱</label>
-        <input id="item-img" className="form-input" type="text" placeholder="default_img.jpg" value={imgPath} onChange={(e)=>{setImgPath(e.target.value)}} />
+        <input id="item-img" className="form-input" type="text" placeholder="default_img.jpg" value={imgName} onChange={(e)=>{setimgName(e.target.value)}} />
 
         <div className="action-div">
           <button className="btn create-btn" onClick={handleCreate}>新增</button>

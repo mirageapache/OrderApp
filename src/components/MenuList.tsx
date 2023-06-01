@@ -10,8 +10,11 @@ import {ReactComponent as IconAdd } from 'assets/icons/add.svg'
 
 interface ItemData {
   name: string;
+  description: string;
   price: number;
-  imgPath: string;
+  itemType: string;
+  customOption: string;
+  imgName: string;
 }
 
 export default function MenuList(){
@@ -45,10 +48,14 @@ export default function MenuList(){
 
 function MenuItem( props:{ data: ItemData; modelState: boolean; handleClick: (value: boolean) => void } ){
   const {data, modelState, handleClick} = props;
-  
+  let imgPath: string = 'images/default_img.jpg';
+  if(data.imgName){
+    imgPath = `/images/${data.itemType}/${data.imgName}`
+  }
+
   return(
     <div className='menu-item'>
-      <img className='item-img' src={data.imgPath || "images/default_img.jpg"} alt="images" />
+      <img className='item-img' src={imgPath} alt="images" />
       <div className='item-info'>
         <p className='item-name'>{data.name}</p>
         <p className='item-price'>NT. {data.price}</p>
