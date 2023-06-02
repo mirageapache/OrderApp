@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/OrderApp/static/css/main.aac9b669.css",
+    "main.js": "/OrderApp/static/js/main.ab2e8401.js",
+    "static/js/787.970c50d9.chunk.js": "/OrderApp/static/js/787.970c50d9.chunk.js",
+    "static/media/list.svg": "/OrderApp/static/media/list.daca2846b08115352723fcc488c41244.svg",
+    "index.html": "/OrderApp/index.html",
+    "static/media/grid.svg": "/OrderApp/static/media/grid.786ed63251e36c7726f4bf3f486440fc.svg",
+    "static/media/cart.svg": "/OrderApp/static/media/cart.30255b02b4d20766b4123ccb0aa6df55.svg",
+    "static/media/error.svg": "/OrderApp/static/media/error.7eb54970bb45dd13363c01f25948b9eb.svg",
+    "static/media/cancel.svg": "/OrderApp/static/media/cancel.09604adb3df12dcd17b90b933394943f.svg",
+    "static/media/add.svg": "/OrderApp/static/media/add.3b3d0548eeb93050046dbd0a37fe334b.svg",
+    "static/media/info.svg": "/OrderApp/static/media/info.59713d2e88daea0235a4f20a539111c0.svg",
+    "static/media/success.svg": "/OrderApp/static/media/success.85c4b937d4fb66c89b7334283044f197.svg",
+    "static/media/minus.svg": "/OrderApp/static/media/minus.d5a1b1a63b515a5591c0fa34ec87aba9.svg",
+    "static/media/warning.svg": "/OrderApp/static/media/warning.dc16998f640068e205fc128077b4c5b4.svg",
+    "main.aac9b669.css.map": "/OrderApp/static/css/main.aac9b669.css.map",
+    "main.ab2e8401.js.map": "/OrderApp/static/js/main.ab2e8401.js.map",
+    "787.970c50d9.chunk.js.map": "/OrderApp/static/js/787.970c50d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aac9b669.css",
+    "static/js/main.ab2e8401.js"
+  ]
+}
