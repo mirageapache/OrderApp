@@ -8,6 +8,7 @@ import { MainPage, CreateItem } from 'pages';
 import './styles/css/reset.css';
 import './styles/css/base.css';
 import { NotiProvider } from 'context/NotiContext';
+import HomePage from 'pages/Homepage';
 
 function App () {
   return (
@@ -15,7 +16,8 @@ function App () {
       <BrowserRouter>
         <SettingProvider>
           <NotiProvider>
-            <Routes>  
+            <Routes>
+              <Route path='*' element={<HomePage/>}></Route>
               <Route path='/' element={<MainPage/>}></Route>
               <Route path='/createMenuItem' element={<CreateItem/>}></Route>
             </Routes>

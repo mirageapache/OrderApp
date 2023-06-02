@@ -1,11 +1,11 @@
 import { useEffect } from "react"
-import { useNavigate } from "react-router"
+import { useNavigate } from "react-router-dom"
 
 export default function HomePage(){
   const navigate = useNavigate();
   useEffect(()=>{
     navigate('/');
-  })
+  },[navigate])
 
   return <div>HomePage</div>
 }
