@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OrderApp/static/css/main.aac9b669.css",
-    "main.js": "/OrderApp/static/js/main.ab2e8401.js",
+    "main.js": "/OrderApp/static/js/main.abf44eba.js",
     "static/js/787.970c50d9.chunk.js": "/OrderApp/static/js/787.970c50d9.chunk.js",
     "static/media/list.svg": "/OrderApp/static/media/list.daca2846b08115352723fcc488c41244.svg",
     "index.html": "/OrderApp/index.html",
@@ -15,11 +15,11 @@
     "static/media/minus.svg": "/OrderApp/static/media/minus.d5a1b1a63b515a5591c0fa34ec87aba9.svg",
     "static/media/warning.svg": "/OrderApp/static/media/warning.dc16998f640068e205fc128077b4c5b4.svg",
     "main.aac9b669.css.map": "/OrderApp/static/css/main.aac9b669.css.map",
-    "main.ab2e8401.js.map": "/OrderApp/static/js/main.ab2e8401.js.map",
+    "main.abf44eba.js.map": "/OrderApp/static/js/main.abf44eba.js.map",
     "787.970c50d9.chunk.js.map": "/OrderApp/static/js/787.970c50d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aac9b669.css",
-    "static/js/main.ab2e8401.js"
+    "static/js/main.abf44eba.js"
   ]
 }
