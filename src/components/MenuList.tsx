@@ -48,9 +48,9 @@ export default function MenuList(){
 
 function MenuItem( props:{ data: ItemData; modelState: boolean; handleClick: (value: boolean) => void } ){
   const {data, modelState, handleClick} = props;
-  let imgPath: string = 'images/default_img.jpg';
+  let imgPath: string = '/OrderApp/images/default_img.jpg';
   if(data.imgName){
-    imgPath = `/images/${data.itemType}/${data.imgName}`
+    imgPath = `/OrderApp/images/${data.itemType}/${data.imgName}`
   }
 
   return(
