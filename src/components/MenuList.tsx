@@ -58,8 +58,8 @@ function MenuItem( props:{ data: ItemData; modelState: boolean; handleClick: (va
       <img className='item-img' src={imgPath} alt="images" />
       <div className='item-info'>
         <p className='item-name'>{data.name}</p>
-        <p className='item-price'>NT. {data.price}</p>
-        <IconAdd className='icon add-icon' onClick={() => handleClick(!modelState)} />
+          <p className='item-price'>NT. {data.price}</p>
+          <IconAdd className='icon add-icon' onClick={() => handleClick(!modelState)} />
       </div>
     </div>
   )

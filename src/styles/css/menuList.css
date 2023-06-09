@@ -10,9 +10,9 @@
 .menu-list .list-mode .menu-item .item-img {
   border: 1px solid gray;
   display: block;
-  width: 100px;
-  min-width: 100px;
-  height: 100px;
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -37,35 +37,42 @@
   fill: var(--brand-color);
 }
 .menu-list .grid-mode {
+  padding: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, auto));
 }
 .menu-list .grid-mode .menu-item {
-  padding: 10px;
+  padding: 5px;
+  border: 1px solid gray;
+  width: 130px;
 }
 .menu-list .grid-mode .menu-item .item-img {
   border: 1px solid gray;
   display: block;
-  width: 100px;
-  min-width: 100px;
-  height: 100px;
+  width: 120px;
+  min-width: 120px;
+  height: 120px;
   border-radius: 10px;
   margin-right: 10px;
 }
 .menu-list .grid-mode .menu-item .item-info {
   position: relative;
+  width: 120px;
 }
 .menu-list .grid-mode .menu-item .item-info .item-name {
   font-size: 1rem;
   font-weight: 700;
+  height: 42px;
+  margin-top: 5px;
 }
 .menu-list .grid-mode .menu-item .item-info .item-price {
   font-size: 1rem;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .menu-list .grid-mode .menu-item .item-info .add-icon {
   position: absolute;
-  right: 25px;
+  right: 0;
   bottom: 0;
   padding: 0;
   margin: 0;
