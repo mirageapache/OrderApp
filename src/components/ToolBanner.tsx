@@ -8,7 +8,7 @@ export default function MenuList(){
   const {menuMode, setmenuMode} = useSetting();
 
   return(
-    <div className="tool-banner">
+    <nav className="tool-banner">
       <IconCart className='icon cart-icon'/>
       <span className='icon-group'>
         {menuMode === 'list-mode'?
@@ -17,6 +17,6 @@ export default function MenuList(){
           <IconList className='icon' onClick={() => { setmenuMode('list-mode') }} />
         }
       </span>
-    </div>
+    </nav>
   )
 }
