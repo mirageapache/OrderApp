@@ -37,12 +37,12 @@ export default function MenuList(){
   })
 
   return(
-    <div className="menu-list">
+    <section className="menu-list">
       { modelState && <ItemModel handleClick={() => setModelState(!modelState)}/> }
       <div className={menuMode}>
         {item}
       </div>
-    </div>
+    </section>
   )
 }
 

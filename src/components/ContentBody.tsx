@@ -4,16 +4,16 @@ import 'styles/css/contentBody.css'
 
 export default function ContentBody(){
   return(
-    <div className='content-body'>
+    <section className='content-body'>
       {/* Side Bar */}
-      <div className='side-bar'>
+      <aside className='side-bar'>
         <SideBar />
-      </div>
+      </aside>
 
       {/* Main Content */}
-      <div className='main-content'>
+      <main className='main-content'>
         <MenuList />
-      </div>
-    </div>
+      </main>
+    </section>
   )
 }
