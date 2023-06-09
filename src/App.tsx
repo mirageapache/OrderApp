@@ -11,9 +11,11 @@ import { NotiProvider } from 'context/NotiContext';
 import HomePage from 'pages/Homepage';
 
 function App () {
+  const basename = process.env.PUBLIC_URL;
+
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <SettingProvider>
           <NotiProvider>
             <Routes>
