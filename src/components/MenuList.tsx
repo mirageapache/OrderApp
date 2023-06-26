@@ -9,6 +9,7 @@ import { apiURL } from 'api';
 import {ReactComponent as IconAdd } from 'assets/icons/add.svg'
 
 interface ItemData {
+  _id: string;
   name: string;
   description: string;
   price: number;
@@ -20,6 +21,7 @@ interface ItemData {
 export default function MenuList(){
   const { menuMode } = useSetting();
   const [modelState, setModelState] = useState<boolean>(false);
+  const [modelId, setModelId] = useState<string>('');
   const [menuList, setMenuList] = useState<any>([]);
 
   useEffect(() => {
@@ -33,12 +35,12 @@ export default function MenuList(){
   },[menuList])
 
   const item = menuList.map((item: ItemData, index: number)=>{
-    return <MenuItem key={index} data={item} modelState={modelState} handleClick={() => setModelState(!modelState)} />
+    return <MenuItem key={index} data={item} modelState={modelState} handleClick={() => {setModelState(!modelState); setModelId(item._id);}} />
   })
 
   return(
     <section className="menu-list">
-      { modelState && <ItemModel handleClick={() => setModelState(!modelState)}/> }
+      { modelState && <ItemModel modelId={modelId} handleClick={() => setModelState(!modelState)}/> }
       <div className={menuMode}>
         {item}
       </div>
