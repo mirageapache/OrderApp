@@ -87,11 +87,10 @@
             border-radius: 20px;
             padding: 8px 15px;
             cursor: pointer;
-
-            &:hover {
-              border: 1px solid #ffae00;
-              background-color: #ffae00;
-            }
+            // &:hover {
+            //   border: 1px solid #ffae00;
+            //   background-color: #ffae00;
+            // }
           }
           .item-option-active{
             font-size: 1em;
@@ -101,11 +100,11 @@
             border-radius: 20px;
             padding: 8px 15px;
             cursor: pointer;
-          
-            &:hover {
-              border: 1px solid gray;
-              background-color: white;
-            }
+            // &:hover {
+            //   border: 1px solid gray;
+            //   background-color: gray;
+            //   color: white;
+            // }
           }
         }
       }

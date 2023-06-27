@@ -80,10 +80,6 @@
   padding: 8px 15px;
   cursor: pointer;
 }
-.item-model .model-panel .model-body .customization .option-div .item-option:hover {
-  border: 1px solid #ffae00;
-  background-color: #ffae00;
-}
 .item-model .model-panel .model-body .customization .option-div .item-option-active {
   font-size: 1em;
   margin: 10px;
@@ -92,10 +88,6 @@
   border-radius: 20px;
   padding: 8px 15px;
   cursor: pointer;
-}
-.item-model .model-panel .model-body .customization .option-div .item-option-active:hover {
-  border: 1px solid gray;
-  background-color: white;
 }
 .item-model .model-panel .model-footer {
   display: flex;
