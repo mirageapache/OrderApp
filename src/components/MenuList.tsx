@@ -1,7 +1,6 @@
 import 'styles/css/menuList.css'
 import axios from 'axios';
 import { useSetting } from 'context/SettingContext';
-import ItemModel from './ItemModel';
 import { useEffect, useState } from 'react';
 import { apiURL } from 'api';
 
@@ -9,6 +8,7 @@ import { apiURL } from 'api';
 import {ReactComponent as IconAdd } from 'assets/icons/add.svg'
 
 interface ItemData {
+  _id: string;
   name: string;
   description: string;
   price: number;
@@ -18,10 +18,10 @@ interface ItemData {
 }
 
 export default function MenuList(){
-  const { menuMode } = useSetting();
-  const [modelState, setModelState] = useState<boolean>(false);
-  const [menuList, setMenuList] = useState<any>([]);
-
+  const { menuMode } = useSetting(); // menu顯示模式
+  const { modelState, setModelState, setItemId } = useSetting(); // item model控制項目
+  const [menuList, setMenuList] = useState<any>([]); // 儲存menuList資料
+  
   useEffect(() => {
     if(menuList.length === 0){
       axios.get(`${apiURL}/menu`)
@@ -33,12 +33,12 @@ export default function MenuList(){
   },[menuList])
 
   const item = menuList.map((item: ItemData, index: number)=>{
-    return <MenuItem key={index} data={item} modelState={modelState} handleClick={() => setModelState(!modelState)} />
+    return <MenuItem key={index} data={item} modelState={modelState} handleClick={() => {setModelState(!modelState); setItemId(item._id);}} />
   })
 
   return(
     <section className="menu-list">
-      { modelState && <ItemModel handleClick={() => setModelState(!modelState)}/> }
+      
       <div className={menuMode}>
         {item}
       </div>
@@ -58,8 +58,8 @@ function MenuItem( props:{ data: ItemData; modelState: boolean; handleClick: (va
       <img className='item-img' src={imgPath} alt="images" />
       <div className='item-info'>
         <p className='item-name'>{data.name}</p>
-        <p className='item-price'>NT. {data.price}</p>
-        <IconAdd className='icon add-icon' onClick={() => handleClick(!modelState)} />
+          <p className='item-price'>NT. {data.price}</p>
+          <IconAdd className='icon add-icon' onClick={() => handleClick(!modelState)} />
       </div>
     </div>
   )

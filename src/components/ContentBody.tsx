@@ -3,6 +3,7 @@ import MenuList from './MenuList'
 import 'styles/css/contentBody.css'
 
 export default function ContentBody(){
+
   return(
     <section className='content-body'>
       {/* Side Bar */}
