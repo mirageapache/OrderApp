@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 // 定義 Context 中 value 的型別
 interface SettingContextType {
   menuMode: string;
-  setmenuMode: (mode: string) => void;
+  setMenuMode: (mode: string) => void;
   modelState: boolean;
   setModelState: (mode: boolean) => void;
   itemId: string;
@@ -13,7 +13,7 @@ interface SettingContextType {
 // 設定context變數的初始值
 const defaultValue: SettingContextType = {
   menuMode: "list-mode",
-  setmenuMode: () => {},
+  setMenuMode: () => {},
   modelState: false,
   setModelState: () => {},
   itemId: '',
@@ -29,7 +29,7 @@ const SettingContext = createContext<SettingContextType>(defaultValue);
 export const useSetting = () => useContext(SettingContext);
 
 export const SettingProvider = ({children}:ProviderProps) => {
-  const [menuMode, setmenuMode] = useState<string>('list-mode'); // menu顯示模式 list & grid
+  const [menuMode, setMenuMode] = useState<string>('list-mode'); // menu顯示模式 list & grid
   const [modelState, setModelState] = useState<boolean>(false); // 控制item model 開啟/關閉
   const [itemId, setItemId] = useState<string>(''); // 儲存item model欲顯示的item id
 
@@ -37,7 +37,7 @@ export const SettingProvider = ({children}:ProviderProps) => {
     <SettingContext.Provider 
       value={{
           menuMode,
-          setmenuMode,
+          setMenuMode,
           modelState,
           setModelState,
           itemId,
