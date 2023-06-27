@@ -1,7 +1,6 @@
 import 'styles/css/menuList.css'
 import axios from 'axios';
 import { useSetting } from 'context/SettingContext';
-import ItemModel from './ItemModel';
 import { useEffect, useState } from 'react';
 import { apiURL } from 'api';
 
@@ -19,11 +18,10 @@ interface ItemData {
 }
 
 export default function MenuList(){
-  const { menuMode } = useSetting();
-  const [modelState, setModelState] = useState<boolean>(false);
-  const [modelId, setModelId] = useState<string>('');
-  const [menuList, setMenuList] = useState<any>([]);
-
+  const { menuMode } = useSetting(); // menu顯示模式
+  const { modelState, setModelState, setItemId } = useSetting(); // item model控制項目
+  const [menuList, setMenuList] = useState<any>([]); // 儲存menuList資料
+  
   useEffect(() => {
     if(menuList.length === 0){
       axios.get(`${apiURL}/menu`)
@@ -35,12 +33,12 @@ export default function MenuList(){
   },[menuList])
 
   const item = menuList.map((item: ItemData, index: number)=>{
-    return <MenuItem key={index} data={item} modelState={modelState} handleClick={() => {setModelState(!modelState); setModelId(item._id);}} />
+    return <MenuItem key={index} data={item} modelState={modelState} handleClick={() => {setModelState(!modelState); setItemId(item._id);}} />
   })
 
   return(
     <section className="menu-list">
-      { modelState && <ItemModel modelId={modelId} handleClick={() => setModelState(!modelState)}/> }
+      
       <div className={menuMode}>
         {item}
       </div>

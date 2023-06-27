@@ -1,5 +1,7 @@
 .item-model{
-  
+  display: flex;
+  justify-content: center;
+
   .gray-panel{
     background-color: rgba(50,50,50,0.5);
     position: fixed;
@@ -10,15 +12,16 @@
     top: 0;
     left: 0;
   }
-
+  
   .model-panel{
     position: fixed;
     z-index: 100;
     display: block;
     background-color: white;
     width: 90vw;
-    left: 5vw;
+    max-width: 800px;
     top: 60px;
+    margin: 0 10px;
     border-radius: 10px;
     padding: 0 30px;
   
@@ -48,39 +51,64 @@
           }
         }
       }
-      
-
     }
     
     .model-body{
       text-align: center;
       max-height: 60vh;
       overflow: auto;
+      padding: 10px;
       
       img{
         border: 1px solid var(--gray-6);
-        width: 40vw;
+        width: 100%;
+        max-width: 410px;
         margin-bottom: 10px;
+      }
+
+      .item-description {
+        font-size: 20px;
+        text-align: left;
+        margin: 10px 0;
       }
 
       .customization{
         border: 1px solid gray;
+        padding: 5px;
         
         .option-div{
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(100px, auto));
 
-          span{
+          .item-option{
             font-size: 1em;
             margin: 10px;
             border: 1px solid gray;
             border-radius: 20px;
             padding: 8px 15px;
             cursor: pointer;
+
+            &:hover {
+              border: 1px solid #ffae00;
+              background-color: #ffae00;
+            }
+          }
+          .item-option-active{
+            font-size: 1em;
+            margin: 10px;
+            border: 1px solid #ffae00;
+            background-color: #ffae00;
+            border-radius: 20px;
+            padding: 8px 15px;
+            cursor: pointer;
+          
+            &:hover {
+              border: 1px solid gray;
+              background-color: white;
+            }
           }
         }
       }
-
     }
 
     .model-footer{
@@ -98,8 +126,8 @@
         padding-right: 20px;
 
         .amount{
-          font-size: 1.2em;
-          line-height: 1.5em;
+          font-size: 1.5em;
+          line-height: 1.8em;
           width: 30px;
           text-align: center;
         }
@@ -122,8 +150,10 @@
         .add-cart{
           background-color:var(--yellow-button-color);
           margin-left: 20px;
+          font-size: 1.2em;
         }
       }
     }
   }
+
 }
