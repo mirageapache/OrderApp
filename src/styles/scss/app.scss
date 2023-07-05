@@ -1,74 +1,85 @@
 // 提示訊息框
-.notification{
-  position: fixed;
-  width: 250px;
-  height: 96px;
-  background-color: white;
-  z-index: 999;
-  top: 20px;
-  left: calc( 50% - 125px);
-  border-radius: 8px;
-  box-shadow: 6px 6px 6px rgba(41, 41, 41, 0.08);
+.noti_panel{
+  position: absolute;
+  width: 100%;
   display: flex;
-  padding: 20px 24px;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid var(--gray-2);
+  justify-content: center;
 
-  .noti_text {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-  }
-
-  .noti_icon {
-    width: 56px;
-    height: 56px;
-    border: 3px solid gray;
-    border-radius: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .notification {
+    position: fixed;
+    max-width: 90%;
+    background-color: white;
     z-index: 999;
-  }
+    top: 20px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 6px rgba(41, 41, 41, 0.08);
+    display: flex;
+    padding: 20px 24px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--gray-2);
 
-  .success_icon {
-    border-color: var(--success-color);
-    svg{
-      path{
-        fill: var(--success-color);
+    .noti_text {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-left: 15px;
+    }
+
+    .noti_icon {
+      width: 56px;
+      height: 56px;
+      border: 3px solid gray;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .success_icon {
+      border-color: var(--success-color);
+
+      svg {
+        path {
+          fill: var(--success-color);
+        }
       }
     }
-  }
 
-  .error_icon {
-    border-color: var(--error-color);
-    svg {
-      path {
-        fill: var(--error-color);
+    .error_icon {
+      border-color: var(--error-color);
+
+      svg {
+        path {
+          fill: var(--error-color);
+        }
       }
     }
-  }
 
-  .warning_icon {
-    border-color: var(--warning-color);
-    svg {
-      path {
-        fill: var(--warning-color);
+    .warning_icon {
+      border-color: var(--warning-color);
+
+      svg {
+        path {
+          fill: var(--warning-color);
+        }
       }
     }
-  }
 
-  .info_icon {
-    border-color: var(--primary-color);
-    svg {
-      path {
-        fill: var(--primary-color);
+    .info_icon {
+      border-color: var(--primary-color);
+
+      svg {
+        path {
+          fill: var(--primary-color);
+        }
       }
     }
-  }
 
+  }
 }
+
 
 
 // 頁面載入
