@@ -6,6 +6,7 @@ import { NotiProvider } from 'context/NotiContext';
 import { CartProvider } from 'context/CartContext';
 // Pages
 import { MainPage, CreateItem } from 'pages';
+
 // CSS style
 import './styles/css/reset.css';
 import './styles/css/base.css';
@@ -13,6 +14,7 @@ import HomePage from 'pages/Homepage';
 
 function App () {
   const basename = process.env.PUBLIC_URL;
+
 
   return (
     <div className="app">

@@ -7,6 +7,7 @@ import { useSetting } from 'context/SettingContext'
 import { useCart } from 'context/CartContext'
 import { apiURL } from 'api'
 import axios from 'axios'
+import { useNoti } from 'context/NotiContext'
 
 // 從api取回資料的custOption型別(用於頁面顯示用的)
 interface CustOption {
@@ -39,6 +40,7 @@ export default function ItemModel(){
   const [custOption, setCustOption] = useState<CartCustOption[]>() // 儲存 custOption 已選擇的客製化項目
   const { setModelState, itemId } = useSetting(); // item model控制項目
   const { setCartItem, setCartInfo} = useCart(); //購物車控制項
+  const { setIsAlert, setNotiMessage } = useNoti();
 
   useEffect(() => {
     if(menuItem === undefined){
@@ -97,8 +99,6 @@ export default function ItemModel(){
   // 加入購物車
   function addCartItem (){
     if(amount > 0){
-      console.log(amount)
-
       setCartItem((prevItem:any) => {
         return [
           ...prevItem,
@@ -116,6 +116,11 @@ export default function ItemModel(){
       // let info = {
       //   'total': 0
       // }
+    }
+    else{
+
+      setNotiMessage({type:"warning", message:"尚未選擇餐點數量！尚未選擇餐點數量！"})
+      setIsAlert(true);
     }
   }
 
