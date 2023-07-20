@@ -1,4 +1,4 @@
-import "styles/scss/itemModel.scss";
+import "styles/itemModel.scss";
 import { ReactComponent as IconCancel } from "assets/icons/cancel.svg";
 import { ReactComponent as IconAdd } from "assets/icons/add.svg";
 import { ReactComponent as IconMinus } from "assets/icons/minus.svg";
