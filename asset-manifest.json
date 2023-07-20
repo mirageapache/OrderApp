@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/OrderApp/static/css/main.65595654.css",
-    "main.js": "/OrderApp/static/js/main.6579add2.js",
+    "main.css": "/OrderApp/static/css/main.65d07841.css",
+    "main.js": "/OrderApp/static/js/main.05bb9594.js",
     "static/js/787.24a3b970.chunk.js": "/OrderApp/static/js/787.24a3b970.chunk.js",
     "static/media/list.svg": "/OrderApp/static/media/list.daca2846b08115352723fcc488c41244.svg",
     "index.html": "/OrderApp/index.html",
@@ -14,12 +14,12 @@
     "static/media/success.svg": "/OrderApp/static/media/success.85c4b937d4fb66c89b7334283044f197.svg",
     "static/media/minus.svg": "/OrderApp/static/media/minus.d5a1b1a63b515a5591c0fa34ec87aba9.svg",
     "static/media/warning.svg": "/OrderApp/static/media/warning.dc16998f640068e205fc128077b4c5b4.svg",
-    "main.65595654.css.map": "/OrderApp/static/css/main.65595654.css.map",
-    "main.6579add2.js.map": "/OrderApp/static/js/main.6579add2.js.map",
+    "main.65d07841.css.map": "/OrderApp/static/css/main.65d07841.css.map",
+    "main.05bb9594.js.map": "/OrderApp/static/js/main.05bb9594.js.map",
     "787.24a3b970.chunk.js.map": "/OrderApp/static/js/787.24a3b970.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65595654.css",
-    "static/js/main.6579add2.js"
+    "static/css/main.65d07841.css",
+    "static/js/main.05bb9594.js"
   ]
 }
