@@ -34,6 +34,12 @@ interface MenuItem {
   imgName: string;
 }
 
+interface CartInfo {
+  itemCount: number;
+  totalPrice: number;
+
+}
+
 export default function ItemModel(){
   const [amount, setAmount] = useState<number>(0);
   const [menuItem, setMenuItem] = useState<MenuItem | undefined>(); // 儲存 item 資料
@@ -112,7 +118,9 @@ export default function ItemModel(){
         ];
       });
 
-
+      setCartInfo((prevInfo:CartInfo) => {
+        
+      })
       // let info = {
       //   'total': 0
       // }

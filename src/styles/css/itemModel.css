@@ -71,11 +71,12 @@
 }
 .item-model .model-panel .model-body .customization .option-div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+  grid-gap: 10px;
+  margin: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, auto));
 }
 .item-model .model-panel .model-body .customization .option-div .item-option {
   font-size: 1em;
-  margin: 10px;
   border: 1px solid gray;
   border-radius: 20px;
   padding: 8px 15px;
