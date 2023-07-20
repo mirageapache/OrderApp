@@ -1,11 +1,15 @@
-.notification {
+.noti_panel {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.noti_panel .notification {
   position: fixed;
-  width: 250px;
-  height: 96px;
+  max-width: 90%;
   background-color: white;
   z-index: 999;
   top: 20px;
-  left: calc(50% - 125px);
   border-radius: 8px;
   box-shadow: 6px 6px 6px rgba(41, 41, 41, 0.08);
   display: flex;
@@ -14,43 +18,44 @@
   justify-content: space-between;
   border: 1px solid var(--gray-2);
 }
-.notification .noti_text {
+.noti_panel .notification .noti_text {
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
+  margin-left: 15px;
 }
-.notification .noti_icon {
+.noti_panel .notification .noti_icon {
   width: 56px;
   height: 56px;
   border: 3px solid gray;
-  border-radius: 56px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
 }
-.notification .success_icon {
+.noti_panel .notification .success_icon {
   border-color: var(--success-color);
 }
-.notification .success_icon svg path {
+.noti_panel .notification .success_icon svg path {
   fill: var(--success-color);
 }
-.notification .error_icon {
+.noti_panel .notification .error_icon {
   border-color: var(--error-color);
 }
-.notification .error_icon svg path {
+.noti_panel .notification .error_icon svg path {
   fill: var(--error-color);
 }
-.notification .warning_icon {
+.noti_panel .notification .warning_icon {
   border-color: var(--warning-color);
 }
-.notification .warning_icon svg path {
+.noti_panel .notification .warning_icon svg path {
   fill: var(--warning-color);
 }
-.notification .info_icon {
+.noti_panel .notification .info_icon {
   border-color: var(--primary-color);
 }
-.notification .info_icon svg path {
+.noti_panel .notification .info_icon svg path {
   fill: var(--primary-color);
 }
 

@@ -32,7 +32,6 @@ export const useNoti = () => useContext(NotiContext);
 export const NotiProvider = ({ children }:ProviderProps) => {
   const [is_alert, setIsAlert] = useState<boolean>(false); //顯示通知
   const [noti_message, setNotiMessage] = useState<notiMsgType>({type:'',message:''}); //通知內容
-  
   return (
     <NotiContext.Provider 
       value={{

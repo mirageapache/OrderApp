@@ -53,14 +53,18 @@ export default function Notification() {
     if(is_alert){
       setTimeout(() => {
         setIsAlert(false);
-      }, 1500);
+      }, 2500);
     }
   },[is_alert, setIsAlert]);
 
   return (
-    <div className="notification">
-      <p className="noti_text">{noti_message.message}</p>
-      {icon}
+    <div className="noti_panel">
+      <div className="notification">
+        <div>
+          {icon}
+        </div>
+        <p className="noti_text">{noti_message.message}</p>
+      </div>
     </div>
   );
 }

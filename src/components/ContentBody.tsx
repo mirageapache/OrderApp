@@ -15,6 +15,8 @@ export default function ContentBody(){
       <main className='main-content'>
         <MenuList />
       </main>
+
+
     </section>
   )
 }

@@ -20,6 +20,7 @@
     background-color: white;
     width: 90vw;
     max-width: 800px;
+    height: 85vh;
     top: 60px;
     margin: 0 10px;
     border-radius: 10px;
@@ -32,7 +33,7 @@
       margin: 15px 0;
 
       .item-name{
-        font-size: 2.5em;
+        font-size: 2em;
       }
 
       .cancel-icon{
@@ -55,7 +56,7 @@
     
     .model-body{
       text-align: center;
-      max-height: 60vh;
+      height: calc(100% - 200px);
       overflow: auto;
       padding: 10px;
       
@@ -78,11 +79,13 @@
         
         .option-div{
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(100px, auto));
-
+          grid-gap: 10px;
+          margin: 10px;
+          grid-template-columns: repeat(auto-fill, minmax(120px, auto));
+          
           .item-option{
             font-size: 1em;
-            margin: 10px;
+            // margin: 10px;
             border: 1px solid gray;
             border-radius: 20px;
             padding: 8px 15px;
@@ -115,6 +118,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      height: 80px;
       margin-top: 10px;
       border-top: 1px solid gray;
       padding: 10px 0;
@@ -122,7 +126,6 @@
       .amount-option{
         display: flex;
         align-items: center; 
-        padding-right: 20px;
 
         .amount{
           font-size: 1.5em;
@@ -154,5 +157,4 @@
       }
     }
   }
-
 }
